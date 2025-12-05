@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f0e6"/>
+
+  <!-- Pattern 2: 小さなカードグリッド型 -->
+  <!-- 控えめなカードで各カテゴリを表現。アイコン付き -->
+
+  <!-- Header (左寄せ、控えめ) -->
+  <text x="60" y="60" font-family="Georgia, serif" font-size="18" fill="#6b5a47" letter-spacing="2">
+    iwamaki.app
+  </text>
+
+  <!-- カードグリッド (2x3) -->
+  <!-- Row 1 -->
+  <!-- Apps Card -->
+  <g transform="translate(100, 120)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- アイコン（シンプルな図形） -->
+    <rect x="70" y="30" width="40" height="40" fill="none" stroke="#8b7355" stroke-width="1.5" rx="8"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Apps</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">アプリケーション</text>
+  </g>
+
+  <!-- Games Card -->
+  <g transform="translate(310, 120)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- ゲームアイコン -->
+    <polygon points="90,30 70,55 90,80 110,55" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Games</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">ブラウザゲーム</text>
+  </g>
+
+  <!-- Works Card -->
+  <g transform="translate(520, 120)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- 作品アイコン -->
+    <circle cx="90" cy="50" r="20" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Works</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">制作物</text>
+  </g>
+
+  <!-- Row 2 -->
+  <!-- Blog Card -->
+  <g transform="translate(100, 290)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- ブログアイコン（本のような形） -->
+    <rect x="75" y="30" width="30" height="40" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="75" y1="42" x2="105" y2="42" stroke="#8b7355" stroke-width="1"/>
+    <line x1="75" y1="54" x2="105" y2="54" stroke="#8b7355" stroke-width="1"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Blog</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">ブログ</text>
+  </g>
+
+  <!-- Tools Card -->
+  <g transform="translate(310, 290)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- ツールアイコン -->
+    <line x1="80" y1="30" x2="100" y2="70" stroke="#8b7355" stroke-width="1.5"/>
+    <line x1="100" y1="30" x2="80" y2="70" stroke="#8b7355" stroke-width="1.5"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Tools</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">便利ツール</text>
+  </g>
+
+  <!-- Contact Card -->
+  <g transform="translate(520, 290)">
+    <rect width="180" height="140" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="3"/>
+    <!-- メールアイコン -->
+    <rect x="70" y="35" width="40" height="28" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <polyline points="70,35 90,52 110,35" fill="none" stroke="#8b7355" stroke-width="1.5"/>
+    <text x="90" y="100" font-family="Georgia, serif" font-size="14" fill="#6b5a47" text-anchor="middle">Contact</text>
+    <text x="90" y="118" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">お問い合わせ</text>
+  </g>
+
+  <!-- フッター -->
+  <text x="400" y="560" font-family="Georgia, serif" font-size="11" fill="#a99b8a" text-anchor="middle">
+    © 2025
+  </text>
+
+  <!-- デザイン説明ラベル -->
+  <rect x="20" y="520" width="220" height="30" fill="#e8e0d4" rx="4"/>
+  <text x="30" y="540" font-family="sans-serif" font-size="12" fill="#6b5a47">
+    Pattern 2: 小さなカードグリッド型
+  </text>
+
+  <!-- 特徴メモ -->
+  <g font-family="sans-serif" font-size="10" fill="#8b7355">
+    <text x="600" y="480">特徴:</text>
+    <text x="600" y="495">・視覚的にわかりやすい</text>
+    <text x="600" y="510">・アイコンで直感的</text>
+    <text x="600" y="525">・カード追加で拡張可能</text>
+    <text x="600" y="540">・控えめながら整理された印象</text>
+  </g>
+</svg>

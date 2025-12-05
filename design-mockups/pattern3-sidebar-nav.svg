@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f3ede3"/>
+
+  <!-- Pattern 3: 横書き一行ナビゲーション型 -->
+  <!-- 上部に薄いナビゲーション、中央は余白を活かす -->
+
+  <!-- 上部ナビゲーションバー -->
+  <rect x="0" y="0" width="800" height="70" fill="#ebe4d8"/>
+  <line x1="0" y1="70" x2="800" y2="70" stroke="#d4c5b0" stroke-width="1"/>
+
+  <!-- ロゴ（左） -->
+  <text x="60" y="42" font-family="Georgia, serif" font-size="16" fill="#6b5a47" letter-spacing="1">
+    iwamaki.app
+  </text>
+
+  <!-- ナビゲーションリンク（右側に横並び） -->
+  <g font-family="Georgia, serif" font-size="13" fill="#8b7355">
+    <text x="420" y="42">Apps</text>
+    <text x="490" y="42">Games</text>
+    <text x="560" y="42">Works</text>
+    <text x="630" y="42">Blog</text>
+    <text x="700" y="42">Contact</text>
+  </g>
+
+  <!-- 中央エリア（余白を活かす） -->
+  <!-- 中央に控えめなメッセージまたは装飾 -->
+  <g transform="translate(400, 300)">
+    <!-- 装飾的な線 -->
+    <line x1="-60" y1="0" x2="60" y2="0" stroke="#c9bba8" stroke-width="1"/>
+    <circle cx="-70" cy="0" r="3" fill="#c9bba8"/>
+    <circle cx="70" cy="0" r="3" fill="#c9bba8"/>
+  </g>
+
+  <!-- 年や簡素なテキスト（あれば） -->
+  <text x="400" y="320" font-family="Georgia, serif" font-size="11" fill="#a99b8a" text-anchor="middle" font-style="italic">
+    2025
+  </text>
+
+  <!-- フッター（最下部、薄く） -->
+  <line x1="100" y1="550" x2="700" y2="550" stroke="#d4c5b0" stroke-width="1"/>
+  <text x="400" y="575" font-family="Georgia, serif" font-size="10" fill="#a99b8a" text-anchor="middle">
+    contact@iwamaki.app
+  </text>
+
+  <!-- デザイン説明ラベル -->
+  <rect x="20" y="520" width="240" height="30" fill="#e8e0d4" rx="4"/>
+  <text x="30" y="540" font-family="sans-serif" font-size="12" fill="#6b5a47">
+    Pattern 3: 横書きナビゲーション型
+  </text>
+
+  <!-- 特徴メモ -->
+  <g font-family="sans-serif" font-size="10" fill="#8b7355">
+    <text x="580" y="450">特徴:</text>
+    <text x="580" y="465">・最も控えめ</text>
+    <text x="580" y="480">・広い余白で落ち着いた印象</text>
+    <text x="580" y="495">・ナビはヘッダーに集約</text>
+    <text x="580" y="510">・和風・伝統的なレイアウト</text>
+    <text x="580" y="525">・コンテンツは各ページで展開</text>
+  </g>
+
+  <!-- 補足：コンテンツページのイメージ（小さく右下に） -->
+  <rect x="580" y="120" width="180" height="120" fill="#fffcf7" stroke="#d4c5b0" stroke-width="1" rx="2"/>
+  <text x="590" y="140" font-family="sans-serif" font-size="9" fill="#8b7355">各カテゴリページのイメージ:</text>
+  <rect x="595" y="150" width="60" height="40" fill="#f5f0e6" stroke="#d4c5b0" stroke-width="0.5" rx="2"/>
+  <rect x="665" y="150" width="60" height="40" fill="#f5f0e6" stroke="#d4c5b0" stroke-width="0.5" rx="2"/>
+  <rect x="595" y="195" width="60" height="40" fill="#f5f0e6" stroke="#d4c5b0" stroke-width="0.5" rx="2"/>
+  <rect x="665" y="195" width="60" height="40" fill="#f5f0e6" stroke="#d4c5b0" stroke-width="0.5" rx="2"/>
+  <text x="590" y="248" font-family="sans-serif" font-size="8" fill="#a99b8a">→ /apps などで詳細表示</text>
+</svg>

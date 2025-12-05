@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="900" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="900" fill="#f5f0e6"/>
+
+  <!-- アプリ詳細ページ -->
+
+  <!-- ヘッダー（シンプル） -->
+  <rect x="0" y="0" width="800" height="50" fill="#ebe4d8"/>
+  <line x1="0" y1="50" x2="800" y2="50" stroke="#d4c5b0" stroke-width="1"/>
+
+  <!-- 戻るリンク -->
+  <text x="60" y="32" font-family="Georgia, serif" font-size="13" fill="#8b7355">
+    ← Apps
+  </text>
+
+  <!-- サイト名（右） -->
+  <text x="740" y="32" font-family="Georgia, serif" font-size="12" fill="#a99b8a" text-anchor="end">
+    iwamaki.app
+  </text>
+
+  <!-- メインコンテンツ -->
+  <g transform="translate(100, 90)">
+    <!-- アプリアイコン + タイトル -->
+    <rect x="0" y="0" width="70" height="70" fill="#fffcf7" stroke="#c9bba8" stroke-width="1" rx="12"/>
+    <text x="35" y="45" font-family="Georgia, serif" font-size="28" fill="#8b7355" text-anchor="middle">N</text>
+
+    <text x="90" y="25" font-family="Georgia, serif" font-size="22" fill="#5c4b3a">NoteApp</text>
+    <text x="90" y="50" font-family="sans-serif" font-size="12" fill="#8b7355">AI-powered note-taking made simple</text>
+    <text x="90" y="70" font-family="sans-serif" font-size="10" fill="#a99b8a">Productivity • 2025-11-28 更新</text>
+  </g>
+
+  <!-- SNS共有ボタン（右上エリア） -->
+  <g transform="translate(550, 100)">
+    <text x="0" y="0" font-family="sans-serif" font-size="10" fill="#a99b8a">Share</text>
+    <g transform="translate(0, 15)">
+      <!-- X (Twitter) -->
+      <circle cx="15" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="15" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">X</text>
+      <!-- Facebook -->
+      <circle cx="50" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="50" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">f</text>
+      <!-- Copy Link -->
+      <circle cx="85" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="85" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">🔗</text>
+    </g>
+  </g>
+
+  <!-- 区切り線 -->
+  <line x1="100" y1="190" x2="700" y2="190" stroke="#d4c5b0" stroke-width="1"/>
+
+  <!-- About セクション -->
+  <g transform="translate(100, 220)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="14" fill="#6b5a47">About</text>
+    <text x="0" y="30" font-family="sans-serif" font-size="12" fill="#6b5a47">
+      <tspan x="0" dy="0">NoteAppは、シンプルで使いやすいノートアプリです。</tspan>
+      <tspan x="0" dy="20">AI機能を活用して、メモの作成や整理をより効率的に</tspan>
+      <tspan x="0" dy="20">行えます。ローカル保存で安心です。</tspan>
+    </text>
+  </g>
+
+  <!-- Features セクション -->
+  <g transform="translate(100, 340)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="14" fill="#6b5a47">Features</text>
+    <g font-family="sans-serif" font-size="11" fill="#6b5a47">
+      <text x="20" y="30">・ シンプルで直感的なUI</text>
+      <text x="20" y="52">・ AI機能でメモ作成をサポート</text>
+      <text x="20" y="74">・ ローカル保存で安心</text>
+      <text x="20" y="96">・ ワンタイム購入モデル</text>
+    </g>
+  </g>
+
+  <!-- スクリーンショット -->
+  <g transform="translate(100, 480)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="14" fill="#6b5a47">Screenshots</text>
+    <!-- スクリーンショットプレースホルダー -->
+    <rect x="0" y="20" width="120" height="200" fill="#ebe4d8" stroke="#c9bba8" stroke-width="1" rx="4"/>
+    <rect x="140" y="20" width="120" height="200" fill="#ebe4d8" stroke="#c9bba8" stroke-width="1" rx="4"/>
+    <rect x="280" y="20" width="120" height="200" fill="#ebe4d8" stroke="#c9bba8" stroke-width="1" rx="4"/>
+  </g>
+
+  <!-- ダウンロードボタン -->
+  <g transform="translate(100, 730)">
+    <rect x="0" y="0" width="180" height="44" fill="#6b5a47" rx="4"/>
+    <text x="90" y="27" font-family="sans-serif" font-size="13" fill="#f5f0e6" text-anchor="middle">Google Play</text>
+  </g>
+
+  <!-- Links セクション -->
+  <g transform="translate(100, 800)">
+    <g font-family="sans-serif" font-size="11" fill="#8b7355">
+      <text x="0" y="0" text-decoration="underline">Terms of Service</text>
+      <text x="120" y="0" text-decoration="underline">Privacy Policy</text>
+      <text x="240" y="0" text-decoration="underline">Contact</text>
+    </g>
+  </g>
+
+  <!-- デザイン説明ラベル -->
+  <rect x="500" y="800" width="180" height="30" fill="#e8e0d4" rx="4"/>
+  <text x="510" y="820" font-family="sans-serif" font-size="11" fill="#6b5a47">
+    アプリ詳細ページ
+  </text>
+
+  <!-- フッター -->
+  <line x1="100" y1="860" x2="700" y2="860" stroke="#d4c5b0" stroke-width="1"/>
+  <text x="400" y="885" font-family="Georgia, serif" font-size="10" fill="#a99b8a" text-anchor="middle">
+    © 2025 iwamaki.app
+  </text>
+</svg>

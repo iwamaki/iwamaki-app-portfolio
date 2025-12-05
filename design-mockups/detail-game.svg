@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background（ゲームは少し暗めのセピア） -->
+  <rect width="800" height="700" fill="#e8e2d6"/>
+
+  <!-- ゲーム詳細ページ -->
+
+  <!-- ヘッダー（シンプル） -->
+  <rect x="0" y="0" width="800" height="50" fill="#ddd6c8"/>
+  <line x1="0" y1="50" x2="800" y2="50" stroke="#c9bba8" stroke-width="1"/>
+
+  <!-- 戻るリンク -->
+  <text x="60" y="32" font-family="Georgia, serif" font-size="13" fill="#8b7355">
+    ← Games
+  </text>
+
+  <!-- サイト名（右） -->
+  <text x="740" y="32" font-family="Georgia, serif" font-size="12" fill="#a99b8a" text-anchor="end">
+    iwamaki.app
+  </text>
+
+  <!-- ゲームタイトル + 共有ボタン -->
+  <g transform="translate(100, 80)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="20" fill="#5c4b3a">Otedama Flyaway</text>
+    <text x="0" y="24" font-family="sans-serif" font-size="12" fill="#8b7355">お手玉を飛ばしてゴールを目指せ！</text>
+  </g>
+
+  <!-- SNS共有ボタン（右上） -->
+  <g transform="translate(550, 70)">
+    <text x="0" y="0" font-family="sans-serif" font-size="10" fill="#a99b8a">Share</text>
+    <g transform="translate(0, 12)">
+      <!-- X (Twitter) -->
+      <circle cx="15" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="15" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">X</text>
+      <!-- Facebook -->
+      <circle cx="50" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="50" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">f</text>
+      <!-- Copy Link -->
+      <circle cx="85" cy="15" r="14" fill="none" stroke="#c9bba8" stroke-width="1"/>
+      <text x="85" y="19" font-family="sans-serif" font-size="10" fill="#8b7355" text-anchor="middle">🔗</text>
+    </g>
+  </g>
+
+  <!-- ゲーム埋め込みエリア（メイン） -->
+  <g transform="translate(100, 130)">
+    <!-- ゲームフレーム -->
+    <rect x="0" y="0" width="600" height="400" fill="#2a2520" stroke="#5c4b3a" stroke-width="2" rx="4"/>
+
+    <!-- プレースホルダーテキスト -->
+    <text x="300" y="200" font-family="sans-serif" font-size="14" fill="#a99b8a" text-anchor="middle">
+      [ Game iframe ]
+    </text>
+
+    <!-- フルスクリーンボタン（右下） -->
+    <rect x="540" y="360" width="50" height="30" fill="#3d352e" rx="3"/>
+    <text x="565" y="380" font-family="sans-serif" font-size="10" fill="#a99b8a" text-anchor="middle">全画面</text>
+  </g>
+
+  <!-- 操作説明（ゲームの下） -->
+  <g transform="translate(100, 555)">
+    <text x="0" y="0" font-family="Georgia, serif" font-size="13" fill="#6b5a47">How to Play</text>
+    <text x="0" y="25" font-family="sans-serif" font-size="11" fill="#8b7355">
+      お手玉をドラッグして引っ張り、離して発射！足場を登ってゴールの籠を目指そう。
+    </text>
+  </g>
+
+  <!-- 詳細情報（控えめに） -->
+  <g transform="translate(100, 620)">
+    <text x="0" y="0" font-family="sans-serif" font-size="10" fill="#a99b8a">
+      Puzzle • 2025-12 公開
+    </text>
+  </g>
+
+  <!-- フッター -->
+  <line x1="100" y1="650" x2="700" y2="650" stroke="#c9bba8" stroke-width="1"/>
+  <text x="400" y="675" font-family="Georgia, serif" font-size="10" fill="#a99b8a" text-anchor="middle">
+    © 2025 iwamaki.app
+  </text>
+
+  <!-- デザイン説明ラベル -->
+  <rect x="500" y="610" width="180" height="30" fill="#ddd6c8" rx="4"/>
+  <text x="510" y="630" font-family="sans-serif" font-size="11" fill="#6b5a47">
+    ゲーム詳細ページ
+  </text>
+</svg>
