@@ -1,12 +1,33 @@
 import Link from "next/link";
-import { games } from "@/data/games";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { games, getLocalized } from "@/data/games";
+import type { Locale } from "@/i18n/routing";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export const metadata = {
-  title: "Games",
-  description: "ブラウザで遊べるゲーム一覧",
-};
+interface GamesPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default function GamesPage() {
+export async function generateMetadata({ params }: GamesPageProps) {
+  const { locale } = await params;
+  return {
+    title: "Games",
+    description:
+      locale === "ja" ? "プレイ可能なウェブゲーム一覧" : "List of playable web games",
+  };
+}
+
+export default async function GamesPage({ params }: GamesPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <GamesContent locale={locale as Locale} />;
+}
+
+function GamesContent({ locale }: { locale: Locale }) {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -16,18 +37,25 @@ export default function GamesPage() {
             href="/"
             className="font-serif text-sm text-foreground-secondary transition-colors hover:text-foreground"
           >
-            ← Home
+            ← {t("common.home")}
           </Link>
-          <span className="font-serif text-sm text-foreground-muted">
-            iwamaki.app
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="font-serif text-sm text-foreground-muted">
+              {t("common.siteName")}
+            </span>
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="mx-auto max-w-5xl px-4 py-12">
-        <h1 className="font-serif text-xl text-foreground">Games</h1>
-        <p className="mt-2 text-sm text-foreground-muted">ブラウザゲーム</p>
+        <h1 className="font-serif text-xl text-foreground">
+          {t("games.title")}
+        </h1>
+        <p className="mt-2 text-sm text-foreground-muted">
+          {t("games.subtitle")}
+        </p>
 
         {/* Card Grid */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -39,14 +67,9 @@ export default function GamesPage() {
             >
               {/* Icon */}
               <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border-light bg-background">
-                <svg
-                  className="h-5 w-5 text-foreground-secondary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <polygon points="12,2 2,12 12,22 22,12" strokeWidth="1.5" />
-                </svg>
+                <span className="font-serif text-lg text-foreground-secondary">
+                  {game.name.charAt(0)}
+                </span>
               </div>
 
               {/* Title & Description */}
@@ -54,7 +77,7 @@ export default function GamesPage() {
                 {game.name}
               </h2>
               <p className="mt-1 text-xs text-foreground-muted">
-                {game.tagline}
+                {getLocalized(game.tagline, locale)}
               </p>
             </Link>
           ))}
@@ -64,7 +87,7 @@ export default function GamesPage() {
       {/* Footer */}
       <footer className="border-t border-border py-6">
         <p className="text-center font-serif text-xs text-foreground-muted">
-          © {new Date().getFullYear()} iwamaki.app
+          © {new Date().getFullYear()} {t("footer.copyright")}
         </p>
       </footer>
     </div>

@@ -1,12 +1,35 @@
 import Link from "next/link";
-import { apps } from "@/data/apps";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { apps, getLocalized } from "@/data/apps";
+import type { Locale } from "@/i18n/routing";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export const metadata = {
-  title: "Apps",
-  description: "公開中のアプリケーション一覧",
-};
+interface AppsPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export default function AppsPage() {
+export async function generateMetadata({ params }: AppsPageProps) {
+  const { locale } = await params;
+  return {
+    title: "Apps",
+    description:
+      locale === "ja"
+        ? "公開中のアプリケーション一覧"
+        : "List of published applications",
+  };
+}
+
+export default async function AppsPage({ params }: AppsPageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <AppsContent locale={locale as Locale} />;
+}
+
+function AppsContent({ locale }: { locale: Locale }) {
+  const t = useTranslations();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -16,18 +39,25 @@ export default function AppsPage() {
             href="/"
             className="font-serif text-sm text-foreground-secondary transition-colors hover:text-foreground"
           >
-            ← Home
+            ← {t("common.home")}
           </Link>
-          <span className="font-serif text-sm text-foreground-muted">
-            iwamaki.app
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="font-serif text-sm text-foreground-muted">
+              {t("common.siteName")}
+            </span>
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="mx-auto max-w-5xl px-4 py-12">
-        <h1 className="font-serif text-xl text-foreground">Apps</h1>
-        <p className="mt-2 text-sm text-foreground-muted">アプリケーション</p>
+        <h1 className="font-serif text-xl text-foreground">
+          {t("apps.title")}
+        </h1>
+        <p className="mt-2 text-sm text-foreground-muted">
+          {t("apps.subtitle")}
+        </p>
 
         {/* Card Grid */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -49,7 +79,7 @@ export default function AppsPage() {
                 {app.name}
               </h2>
               <p className="mt-1 text-xs text-foreground-muted">
-                {app.tagline}
+                {getLocalized(app.tagline, locale)}
               </p>
             </Link>
           ))}
@@ -59,7 +89,7 @@ export default function AppsPage() {
       {/* Footer */}
       <footer className="border-t border-border py-6">
         <p className="text-center font-serif text-xs text-foreground-muted">
-          © {new Date().getFullYear()} iwamaki.app
+          © {new Date().getFullYear()} {t("footer.copyright")}
         </p>
       </footer>
     </div>

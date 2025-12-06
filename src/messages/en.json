@@ -1,0 +1,33 @@
+{
+  "common": {
+    "siteName": "iwamaki.app",
+    "home": "Home",
+    "apps": "Apps",
+    "games": "Games",
+    "contact": "Contact",
+    "share": "Share",
+    "linkCopied": "Link copied!",
+    "updated": "Updated",
+    "released": "Released",
+    "about": "About",
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "howToPlay": "How to Play",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "home": {
+    "tagline": "Things I've Made"
+  },
+  "apps": {
+    "title": "Apps",
+    "subtitle": "Applications"
+  },
+  "games": {
+    "title": "Games",
+    "subtitle": "Web Games"
+  },
+  "footer": {
+    "copyright": "iwamaki.app"
+  }
+}

@@ -1,18 +1,21 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface ShareButtonsProps {
   url: string;
   title: string;
 }
 
 export default function ShareButtons({ url, title }: ShareButtonsProps) {
+  const t = useTranslations();
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(title);
 
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(url);
-      alert("リンクをコピーしました");
+      alert(t("common.linkCopied"));
     } catch {
       // Fallback for older browsers
       const textArea = document.createElement("textarea");
@@ -21,13 +24,13 @@ export default function ShareButtons({ url, title }: ShareButtonsProps) {
       textArea.select();
       document.execCommand("copy");
       document.body.removeChild(textArea);
-      alert("リンクをコピーしました");
+      alert(t("common.linkCopied"));
     }
   };
 
   return (
     <div className="flex flex-col items-start gap-2">
-      <span className="text-xs text-foreground-muted">Share</span>
+      <span className="text-xs text-foreground-muted">{t("common.share")}</span>
       <div className="flex gap-2">
         {/* X (Twitter) */}
         <a

@@ -1,0 +1,33 @@
+{
+  "common": {
+    "siteName": "iwamaki.app",
+    "home": "ホーム",
+    "apps": "アプリ",
+    "games": "ゲーム",
+    "contact": "お問い合わせ",
+    "share": "シェア",
+    "linkCopied": "リンクをコピーしました",
+    "updated": "更新",
+    "released": "公開",
+    "about": "概要",
+    "features": "機能",
+    "screenshots": "スクリーンショット",
+    "howToPlay": "遊び方",
+    "termsOfService": "利用規約",
+    "privacyPolicy": "プライバシーポリシー"
+  },
+  "home": {
+    "tagline": "つくったもの"
+  },
+  "apps": {
+    "title": "Apps",
+    "subtitle": "アプリケーション"
+  },
+  "games": {
+    "title": "Games",
+    "subtitle": "ウェブゲーム"
+  },
+  "footer": {
+    "copyright": "iwamaki.app"
+  }
+}

@@ -1,21 +1,36 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export default function Home() {
+interface HomePageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Home({ params }: HomePageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <HomeContent />;
+}
+
+function HomeContent() {
+  const t = useTranslations();
+
   const navItems = [
-    { href: "/apps", label: "Apps" },
-    { href: "/games", label: "Games" },
-    // { href: "/blog", label: "Blog" },
-    // { href: "/works", label: "Works" },
+    { href: "/apps", label: t("common.apps") },
+    { href: "/games", label: t("common.games") },
   ];
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
       {/* Header */}
       <header className="border-b border-border bg-background-secondary">
-        <div className="mx-auto flex h-14 max-w-5xl items-center justify-center px-4">
+        <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
           <span className="font-serif text-sm text-foreground-muted">
-            iwamaki.app
+            {t("common.siteName")}
           </span>
+          <LanguageSwitcher />
         </div>
       </header>
 
@@ -23,7 +38,7 @@ export default function Home() {
       <main className="flex flex-1 flex-col items-center justify-center px-4">
         {/* Description */}
         <p className="mb-10 font-serif text-sm text-foreground-muted">
-          つくったもの
+          {t("home.tagline")}
         </p>
 
         {/* Navigation Links */}
@@ -49,7 +64,7 @@ export default function Home() {
             href="mailto:contact@iwamaki.app"
             className="font-serif text-sm text-foreground-muted transition-colors hover:text-foreground-secondary"
           >
-            Contact
+            {t("common.contact")}
           </a>
         </div>
       </main>
