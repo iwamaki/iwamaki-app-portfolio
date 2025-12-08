@@ -28232,7 +28232,7 @@ var $async$K9=A.y(function(a,b){if(a===1)return A.u(b,r)
 for(;;)switch(s){case 0:if($.a2==null)A.aEq()
 $.a2.toString
 s=2
-return A.p($.aG6().xy(".env"),$async$K9)
+return A.p($.aG6().xy("config.txt"),$async$K9)
 case 2:q=$.aG6()
 if(!q.a)A.a5(new A.OC())
 p=q.b.i(0,"LOG_LEVEL")
